@@ -1,0 +1,39 @@
+{
+  "name": "minigame",
+  "version": "1.0.0",
+  "description": "This is a tiny school project to explore build and automation tools.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasdjs/minigame.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Angular",
+    "Express",
+    "Mocha",
+    "Chai",
+    "Gulp",
+    "SASS"
+  ],
+  "author": "Andreas Dagnell, Robert Lindell, Hanna Andersson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreasdjs/minigame/issues"
+  },
+  "homepage": "https://github.com/andreasdjs/minigame#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "mocha": "^3.0.2"
+  }
+}
