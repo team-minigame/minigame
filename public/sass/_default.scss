@@ -1,0 +1,166 @@
+body {
+/*    @include backgroundDiagonalGradient($backgroundPrimaryColor, $backgroundSecondaryColor); */
+	background-color: $backgroundPrimaryColor;
+    margin: 0;
+    padding: 0;
+    font-family: $defaultFont;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $defaultHeaderFont;
+    font-weight: 400;
+}
+
+a {
+    color: $defaultLinkColor;
+    &:hover {
+        color: $defaultLinkHoverColor;
+    }
+}
+
+div#container {
+/*    @include background($color:$backgroundColorContainer); */
+    margin: 0 auto;
+    height: 100%;
+    div#logo {
+/*    	background-color: #c0c0c0; */
+    	height: 112px;
+/*        height: 127px; */
+/*    	height: 160px; */
+/*    	border-bottom: 8px solid $defaultTextColor; */
+    }
+	.title {
+/*		font-size: 105px; */
+		font-size: 56px;
+		margin-top: 0px;
+		padding-top: 30px;
+		letter-spacing: 12px;
+		text-align: center;
+		color: $defaultTextColor; 
+	}
+    div#innerContainer {
+        border-top: 1px solid $defaultTextColor; 
+        margin: auto 20px;
+    }
+    div#footer {
+    	min-height: 100px;
+    }
+    div.user {
+
+/* flex *//*
+    display: flex; 
+    flex-wrap: wrap
+*//* */
+
+	line-height:30px;
+	margin-bottom:4px;
+		span.name {
+			white-space:nowrap; 
+			margin-right:10px;
+		}
+	}
+}
+
+span.skill {
+/*    line-height:0px; *//* fix flex wrapping v-align mini bug */
+	background-color: #f0f0f0; 
+	margin-right: 1px;
+	padding: 2px 8px;
+	white-space: nowrap; 
+	&:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+/*
+.delete {
+    padding-left: 4px;
+    padding-right: 0px;
+    &:hover {
+    background-color: red;
+    color: white;
+    }
+}    
+*/
+
+/*
+.delete {
+    white-space: nowrap;
+} */
+
+.hello {
+    white-space: nowrap;    
+}
+
+/* chain-selecting double class */
+
+span.skill.deletehover { 
+    background-color: red;
+    color: white; 
+}
+
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+  padding: 8px 12px;
+}
+
+/* Basic input styling */ 
+
+input {
+    margin-bottom: 4px;
+    outline: none;
+    border: 1px solid #999;
+    background: #f0f0f0;
+}
+
+input:focus {
+    border-bottom: solid #45bc56 5px;
+    margin-bottom: 0px;
+    background: #f6f6f6; /* Light up when focused */
+}
+
+button {
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border: 0px solid white;    
+    outline: none;
+    &:hover {
+        background-color: #45bc56;
+        color: white;
+    }
+    &:active { 
+        background-color: white;
+        color: black;
+    }
+}
+
+button.addFriend {
+  padding: 0px 12px;
+  margin-left: 6px;
+}
+
+.card {
+    display: flex;
+    margin-bottom:10px;
+    button {
+        margin-right:10px;
+    }
+    .questionNumber { 
+        float: left;
+        width: 30px;
+        height: 37px;
+        line-height: 37px;
+        font-size: 21px;
+        font-weight: bold;
+        padding-left: 13px;
+        padding-right: 13px;
+        text-align: right;
+    }
+}
+
+

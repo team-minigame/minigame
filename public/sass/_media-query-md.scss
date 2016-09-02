@@ -1,0 +1,21 @@
+@media (min-width: $screen-md) { 
+	div#container {
+    div#innerContainer {
+        border-top: 1px solid $defaultTextColor; 
+        margin: auto 100px;
+    }
+	    div#logo {
+	    	height: 160px;
+	    }
+		.title {
+			font-size: $mediumTitleSize;
+			padding-top: 30px;
+			letter-spacing: 12px;
+		}
+	}
+
+}
+
+
+
+

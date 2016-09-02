@@ -1,0 +1,14 @@
+@media (min-width: $screen-lg) { 
+	div#container {
+	    div#logo {
+	    	height: 160px;
+	    }
+		.title {
+			font-size: $largeTitleSize;
+			padding-top: 30px;
+			letter-spacing: 12px;
+		}
+	}
+}
+
+
