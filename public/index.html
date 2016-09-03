@@ -10,21 +10,28 @@
 	<script src="https://use.typekit.net/vrc8urf.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<!-- Live reload --> 
-	<script>
+	<!-- <script>
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
+    </script> -->
+    <!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
 </head>
 <body ng-app="app">
 	<div id="container">
-		<div ng-controller="myController">
+		<div id="message" ng-controller="myCtrl as ctrl">
 			<div id="logo"><h1 class="title">MINI GAME</h1></div>
 			<div id="innerContainer">
-				<h1 id="bigOne"></h1>
 				
 				<h1>Vad hände först?</h1>
 				<div class="card">
 				<span class="questionNumber">1.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
+					<button>{{ ctrl.object | json }}</button><button>Förste mannen på månen.</button>
 				</div>
 				<div class="card">
 				<span class="questionNumber">2.</span> 
