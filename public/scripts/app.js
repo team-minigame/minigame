@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'firebase']);
 
 		// Initialize Firebase
   var config = {
@@ -11,6 +11,27 @@ var app = angular.module('app', ['ngRoute']);
   };
   firebase.initializeApp(config);
 
-  var bigOne = document.getElementById('bigOne');
-  var dbRef = firebase.database().ref().child('text');
-  dbRef.on('value', snap => bigOne.innerText = snap.val());
+  function ApplikationConfig($routeProvider) {
+  	$routeProvider.when('/', {
+  		controller: 'MyCtrl as ctrl',
+  		templateUrl: 'views/myctrl.html',
+  	})
+  };
+
+  //Get element
+  const preObject = document.getElementById('object');
+
+  // Create refrences
+  const dbRefObject = firebase.database().ref().child('object');
+
+  // Sync object changes
+  //dbRefObject.on('value', snap => {
+  	//preObject.innerText = JSON.stringify(snap.val(), null, 3);
+  //});
+
+
+  //var bigOne = document.getElementById('bigOne');
+  //var dbRef = firebase.database().ref().child('text');
+  //dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+
