@@ -24,14 +24,14 @@
 </head>
 <body ng-app="app">
 	<div id="container">
-		<div id="message" ng-controller="myCtrl as ctrl">
+		<div id="message">
 			<div id="logo"><h1 class="title">MINI GAME</h1></div>
-			<div id="innerContainer">
+			<div id="innerContainer" ng-controller="myCtrl">
 				
 				<h1>Vad hände först?</h1>
 				<div class="card">
 				<span class="questionNumber">1.</span> 
-					<button>{{ ctrl.object | json }}</button><button>Förste mannen på månen.</button>
+					<button>{{ event.whatone }}</button><button>Förste mannen på månen.</button>
 				</div>
 				<div class="card">
 				<span class="questionNumber">2.</span> 
@@ -69,7 +69,9 @@
 				<span class="questionNumber">10.</span> 
 					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
 				</div>
-
+				<input type="text" ng-model="event.whatone">
+				<input type="text" ng-model="event.whenone">
+			</div>
 			<div id="footer"> </div>
 		</div>
 	</div>
@@ -77,7 +79,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
 -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 
