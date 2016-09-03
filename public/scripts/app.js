@@ -13,7 +13,7 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
 
   function ApplikationConfig($routeProvider) {
   	$routeProvider.when('/', {
-  		controller: 'MyCtrl as ctrl',
+  		controller: 'myCtrl',
   		templateUrl: 'views/myctrl.html',
   	})
   };
