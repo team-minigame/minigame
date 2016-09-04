@@ -1,5 +1,9 @@
 'use strict';
 
+var services = require("./services.js");
+var controllers = require("./controllers.js");
+var directives = require("./directives.js");
+
 var app = angular.module('app', ['ngRoute', 'firebase']);
 
 		// Initialize Firebase
@@ -34,4 +38,7 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
   //var dbRef = firebase.database().ref().child('text');
   //dbRef.on('value', snap => bigOne.innerText = snap.val());
 
+services();
+controllers();
+directives();
 

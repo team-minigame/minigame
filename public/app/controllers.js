@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('myCtrl', function($scope, dataService, $firebaseObject, $firebaseArray) {
+app.controller('myCtrl', function($scope, $firebaseObject, $firebaseArray) {
 
 	var ref = firebase.database().ref();
 	var firebaseObject = $firebaseObject(ref);
@@ -15,10 +15,9 @@ app.controller('myCtrl', function($scope, dataService, $firebaseObject, $firebas
 	//const ref = rootRef.child('object');
 	//this.object = $firebaseObject(ref);
 
-
-/* */
-
 });
+
+
 
 
 
