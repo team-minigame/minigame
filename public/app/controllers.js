@@ -1,24 +1,32 @@
-'use strict';
 
-app.controller('myCtrl', function($scope, $firebaseObject, $firebaseArray) {
+module.exports = angular.module('app').controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
 
-	var ref = firebase.database().ref();
-	var firebaseObject = $firebaseObject(ref);
+// angular.module('app').controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
 
-	$scope.events = $firebaseArray(ref);
-	$scope.add = function() {
-		$scope.events.$add($scope.what);
-	}
+// app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
 
-	//firebaseObject.$bindTo($scope,"event");
-	//const rootRef = firebase.database().ref().child('angular');
-	//const ref = rootRef.child('object');
-	//this.object = $firebaseObject(ref);
+  var ref = firebase.database().ref();
+  var firebaseObject = $firebaseObject(ref);
 
-});
+  $scope.events = $firebaseArray(ref);
+/*
+ function myFunction(a, b) {
+    return a * b;
+  }
 
+  var x = myFunction(4, 3); 
 
+  console.log(x);
+*/
 
+  $scope.add = function() {
+    $scope.events.$add($scope.what);
+  }
 
+  //firebaseObject.$bindTo($scope,"event");
+  //const rootRef = firebase.database().ref().child('angular');
+  //const ref = rootRef.child('object');
+  //this.object = $firebaseObject(ref);
 
+}]);
 
