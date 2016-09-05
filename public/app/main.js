@@ -42,11 +42,6 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
 /***********************************/
 /* Angular Controller
 /***********************************/
-/*
-app.controller('myCtrl', function($scope, $firebaseObject, $firebaseArray) {
-
-*/
-/* ["$scope", "$q", function($scope, $q) { */
 
 app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
 
@@ -64,12 +59,3 @@ app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", functio
   //this.object = $firebaseObject(ref);
 
 }]);
-
-/*
-});
-*/
-
-// $scope, $firebaseObject, $firebaseArray
-/*
-app.controller.$inject = ['$scope', '$firebaseObject', '$firebaseArray'];
-*/
