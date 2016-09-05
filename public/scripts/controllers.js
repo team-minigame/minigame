@@ -7,6 +7,7 @@ app.controller('myCtrl', function($scope, dataService, $firebaseObject, $firebas
 
 	$scope.events = $firebaseArray(ref);
 	$scope.add = function() {
+		//event.id = events.length + 1;
 		$scope.events.$add($scope.what);
 	}
 
