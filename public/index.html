@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>mini game</title>
+	<title>När då då?</title>
 	<meta charset="UTF-8">	
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
 	
@@ -32,7 +32,7 @@
 				<h1>Vad hände först?</h1>
 				<div class="card">
 				<span class="questionNumber">1.</span> 
-				<button ng-repeat="e in events"> {{ e.event }} </button><button>Förste mannen på månen.</button>
+				<button ng-repeat="e in events"> {{ e.event }} </button>
 				</div>
 				<div class="card">
 				<span class="questionNumber">2.</span> 
@@ -70,8 +70,12 @@
 				<span class="questionNumber">10.</span> 
 					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
 				</div>
-				<input type="text" ng-model="what.event">
-				<button ng-click="add()">Lägg till händelse och årtal</button>
+
+				<div>
+					<h1>Lägg till händelse och årtal</h1>
+					<input type="text" ng-model="what.event">
+					<button ng-click="add()">Lägg till händelse och årtal</button>
+				</div>
 			</div>
 			<div id="footer"> </div>
 		</div>
@@ -81,13 +85,30 @@
 
 	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 
+<!-- Split angular files-->
+
+<!--
 	<script src="app/app.js" type="text/javascript"></script>
 	<script src="app/services.js" type="text/javascript"></script>	
 	<script src="app/controllers.js" type="text/javascript"></script>
 	<script src="app/directives.js" type="text/javascript"></script>
+-->
+
+<!-- Main angular file -->
+
+<!--
+	<script src="app/main.js" type="text/javascript"></script>
+-->
+
+<!-- Browserify bundle file -->
 <!--
 	<script src="js/bundle.js" type="text/javascript"></script>
 -->
+<!-- Browserify bundle file minified -->
+
+
+	<script src="js/bundle.min.js" type="text/javascript"></script>
+
 
 </body>
 </html>

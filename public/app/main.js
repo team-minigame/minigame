@@ -1,12 +1,11 @@
 'use strict';
 
-var services = require("./services.js");
-var controllers = require("./controllers.js");
-var directives = require("./directives.js");
-
 var app = angular.module('app', ['ngRoute', 'firebase']);
 
-		// Initialize Firebase
+/***********************************/
+/* Initialize Firebase
+/***********************************/
+
   var config = {
     apiKey: "AIzaSyA4ZXOI3dRE-oC5c3qyzqp-95rR7zR3Fgw",
     authDomain: "game-project-62225.firebaseapp.com",
@@ -16,29 +15,61 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
   firebase.initializeApp(config);
 
   function ApplikationConfig($routeProvider) {
-  	$routeProvider.when('/', {
-  		controller: 'myCtrl',
-  		templateUrl: 'views/myctrl.html',
-  	})
+    $routeProvider.when('/', {
+      controller: 'myCtrl',
+      templateUrl: 'views/myctrl.html',
+    })
   };
 
   //Get element
+
   const preObject = document.getElementById('object');
 
   // Create refrences
+
   const dbRefObject = firebase.database().ref().child('object');
 
   // Sync object changes
-  //dbRefObject.on('value', snap => {
-  	//preObject.innerText = JSON.stringify(snap.val(), null, 3);
-  //});
 
+  //dbRefObject.on('value', snap => {
+    //preObject.innerText = JSON.stringify(snap.val(), null, 3);
+  //});
 
   //var bigOne = document.getElementById('bigOne');
   //var dbRef = firebase.database().ref().child('text');
   //dbRef.on('value', snap => bigOne.innerText = snap.val());
 
-services();
-controllers();
-directives();
+/***********************************/
+/* Angular Controller
+/***********************************/
+/*
+app.controller('myCtrl', function($scope, $firebaseObject, $firebaseArray) {
 
+*/
+/* ["$scope", "$q", function($scope, $q) { */
+
+app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
+
+  var ref = firebase.database().ref();
+  var firebaseObject = $firebaseObject(ref);
+
+  $scope.events = $firebaseArray(ref);
+  $scope.add = function() {
+    $scope.events.$add($scope.what);
+  }
+
+  //firebaseObject.$bindTo($scope,"event");
+  //const rootRef = firebase.database().ref().child('angular');
+  //const ref = rootRef.child('object');
+  //this.object = $firebaseObject(ref);
+
+}]);
+
+/*
+});
+*/
+
+// $scope, $firebaseObject, $firebaseArray
+/*
+app.controller.$inject = ['$scope', '$firebaseObject', '$firebaseArray'];
+*/
