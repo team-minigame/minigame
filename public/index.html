@@ -70,10 +70,15 @@
 				<span class="questionNumber">10.</span> 
 					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
 				</div>
-
 				<div>
-					<h1>Lägg till händelse och årtal</h1>
+					<label class="labelStyle" id="eventWhat">Händelse</label>
+				<div>
 					<input type="text" ng-model="what.event">
+				</div>
+					<label class="labelStyle" id="eventYear">År</label>
+				<div>
+					<input type="text" ng-model="year.event">
+				</div>
 					<button ng-click="add()">Lägg till händelse och årtal</button>
 				</div>
 			</div>
