@@ -77,12 +77,13 @@ gulp.task('sass-minifyed', function() {
 });
 
 gulp.task('js', function() {
+/*
 	return browserify([
 			'./public/app/services.js',
 			'./public/app/controllers.js',
 			'./public/app/directives.js'
 			], { debug: true })
-
+*/
 /*
 	return browserify([
 			'./public/app/app.js',
@@ -92,7 +93,7 @@ gulp.task('js', function() {
 			], { debug: true })
 			*/
 //	return browserify('./public/app/app.js', { debug: true })
-/*	return browserify('./public/app/main.js', { debug: true }) */
+	return browserify('./public/app/main.js', { debug: true }) 
 //		.transform(babelify)
 		.bundle()
 //		.bundle({ debug: true })
@@ -101,6 +102,15 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('.'));
 });
 
+gulp.task('js-minifyed', function() {
+    return browserify('./public/app/main.js', { debug: true }) 
+//      .transform(babelify)
+        .bundle()
+//      .bundle({ debug: true })
+        .pipe(source('./public/js/bundle.min.js'))
+        .pipe(streamify(uglify()))
+        .pipe(gulp.dest('.'));
+});
 
 /********************************************/
 /* Watch 									*/
@@ -109,6 +119,7 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(jsInput, ['js']);
+    gulp.watch(jsInput, ['js-minifyed']);
 //    gulp.watch(['./public/app/*.js'], ['js']);
     gulp.watch(sassInput, ['sass']);
     gulp.watch(sassInput, ['sass-minifyed']);
