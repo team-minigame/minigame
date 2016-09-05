@@ -1,5 +1,8 @@
 'use strict';
 
+// require angular
+// var controllers = require('controllers.js');
+
 var app = angular.module('app', ['ngRoute', 'firebase']);
 
 /***********************************/
@@ -43,12 +46,17 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
 /* Angular Controller
 /***********************************/
 
+require('./controllers.js');
+
+
+/*
 app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
 
   var ref = firebase.database().ref();
   var firebaseObject = $firebaseObject(ref);
 
   $scope.events = $firebaseArray(ref);
+
   $scope.add = function() {
     $scope.events.$add($scope.what);
   }
@@ -59,3 +67,4 @@ app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", functio
   //this.object = $firebaseObject(ref);
 
 }]);
+*/
