@@ -10,8 +10,7 @@ module.exports = angular.module('app').controller('myCtrl', ["$scope", "$firebas
   var firebaseObject = $firebaseObject(ref);
 
   $scope.events = $firebaseArray(ref);
-    $scope.name = "abc";
-    console.log($scope.name);
+
 /*
  function myFunction(a, b) {
     return a * b;

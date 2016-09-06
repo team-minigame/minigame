@@ -28,8 +28,6 @@
 		<div id="message">
 			<div id="logo"><h1 class="title">MINI GAME</h1></div>
 			<div id="innerContainer" ng-controller="myCtrl">
-
-				{{name}}
 				
 				<h1>Vad hände först?</h1>
 				<div class="card">
@@ -75,12 +73,12 @@
 				<span class="questionNumber">10.</span> 
 					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
 				</div>
-				<form ng-submit="add()" id="Event">
+				<form id="Event">
 					<label class="labelStyle" id="Event">Händelse</label>
 						<input type="text" ng-model="event.name">
 					<label class="labelStyle" id="Year">År</label>
 						<input type="text" ng-model="event.year">
-						<button type="submit" ng-click="add()">Lägg till händelse och årtal</button>
+						<button ng-click="add()">Lägg till händelse och årtal</button>
 				</form>
 			</div>
 			<div id="footer"> </div>
