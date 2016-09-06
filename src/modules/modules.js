@@ -10,3 +10,14 @@ exports.simplifyString = function(inputString) {
 
 	return output;
 }
+
+exports.checkYear = function(a,b) {
+
+	var output = b;
+
+	if(a > b){
+		output = a;
+	}
+
+	return output;
+}
