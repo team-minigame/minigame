@@ -23,7 +23,7 @@ describe('Check that year is a number.', function() {
 */
 	it('has four digits', function(){
 		var year = modules.checkYear(year);
-		expect(output).to.have.lengthof(4);
+		expect(output).to.have.lengthOf(4);
 	});
 
 	it('year is later than 1800', function(){
