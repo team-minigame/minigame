@@ -3,6 +3,8 @@
 // require angular
 // var controllers = require('controllers.js');
 
+var modules = require('./modules'); // get functions
+
 var app = angular.module('app', ['ngRoute', 'firebase']);
 
 /***********************************/
@@ -48,7 +50,6 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
 
 require('./controllers.js');
 
-
 /*
 app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
 
@@ -69,3 +70,19 @@ app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", functio
 
 }]);
 */
+
+/***********************************/
+/* Angular Routing
+/***********************************/
+
+
+/***********************************/
+/* Temp
+/***********************************/
+
+//var output = modules.getLowestYear(2001, 1984);
+console.log(modules.getLowestYear(2001, 1984));
+
+
+
+
