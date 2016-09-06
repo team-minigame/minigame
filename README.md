@@ -4,23 +4,23 @@
 
 This is a tiny school project to explore build and automation tools. 
 
-##### Technologies used  
+### Technologies used  
 
-Main platform:
+##### Main platform:
 
 Node, Express, Angular, Firebase
 
-Build/Automation tools:
+##### Build/Automation tools:
 
 - Browserify for bundling and compressing
 - Mocha/Chai for unit testning
 - Gulp for automating Browserify and SASS (including livereload, autoprefixer, rename, sass, sourcemaps, streamify, uglify & vinyl source stream).
 
-##### Credits 
+### Credits 
 
 Hanna Andersson, Andreas Dagnell, Robert Lindell
 
-##### About
+### About
 
 The application is a little game (N.B. in swedish) where you guess what historical events occurs before another.
 
