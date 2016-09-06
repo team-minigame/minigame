@@ -4,6 +4,10 @@
 
 This is a tiny school project to explore build and automation tools. 
 
+### About
+
+The application is a little game (N.B. in swedish) where you guess what historical events occurs before another.
+
 ### Technologies used  
 
 ##### Main platform:
@@ -19,10 +23,6 @@ Node, Express, Angular, Firebase
 ### Credits 
 
 Hanna Andersson, Andreas Dagnell, Robert Lindell
-
-### About
-
-The application is a little game (N.B. in swedish) where you guess what historical events occurs before another.
 
 ## Installation
 
