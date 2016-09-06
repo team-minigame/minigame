@@ -7,8 +7,9 @@ var modules = require('../modules/modules.js');
 describe('Check that year is a number.', function() {
 
 	it('Year is a num', function(){
-		var year = modules.checkYear(year);
-		expect(output).to.be.a(num);		
+		var output = modules.checkYear(2001, 1984);
+		//expect(output).to.be.a(num);		
+		assert.isNumber(output);
 	});
 /*
 	it('has four digits', function(){
