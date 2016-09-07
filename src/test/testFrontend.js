@@ -1,5 +1,7 @@
 var expect = require('chai').expect;
 var assert = require('chai').assert;
+var should = require('chai').should();
+
 
 var modules = require('../../public/app/modules.js');
 
@@ -30,6 +32,23 @@ describe('Frontend: getTotalScore', function() {
 		expect(output).to.eql(12);
 	});
 
+});
+
+describe('Frontend: getEvenTests', function() {
+
+	var boolean = modules.getEvenTests(2, 76, 77);
+
+	it('Should always return a boolean', function() {
+  		expect(isEven(2)).to.be.a('boolean');
+	});
+	
+	it('Calling isEven(76) sould return true.', function() {
+  		expect(isEven(76)).to.be.true;
+	});
+
+	it('Calling isEven(77) sould return false.', function() {
+  		expect(isEven(77)).to.be.false;
+	});
 });
 
 
