@@ -26,24 +26,6 @@ var app = angular.module('app', ['ngRoute', 'firebase']);
     })
   };
 
-  //Get element
-
-  const preObject = document.getElementById('object');
-
-  // Create refrences
-
-  const dbRefObject = firebase.database().ref().child('object');
-
-  // Sync object changes
-
-  //dbRefObject.on('value', snap => {
-    //preObject.innerText = JSON.stringify(snap.val(), null, 3);
-  //});
-
-  //var bigOne = document.getElementById('bigOne');
-  //var dbRef = firebase.database().ref().child('text');
-  //dbRef.on('value', snap => bigOne.innerText = snap.val());
-
 /***********************************/
 /* Angular Controller
 /***********************************/
@@ -82,7 +64,7 @@ app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", functio
 
 //var output = modules.getLowestYear(2001, 1984);
 console.log(modules.getLowestYear(2001, 1984));
-console.log(modules.getEvenTests(2, 76, 77));
+console.log(modules.isEven(2, 76, 77));
 
 
 
