@@ -131,6 +131,7 @@ button {
     outline: none;
     &:hover {
         background-color: #45bc56;
+        border: 2px solid #45bc56;    
         color: white;
     }
     &:active { 
@@ -174,6 +175,14 @@ button.event {
     &:active { 
             background-color: #666;
             border: 2px solid #eee;
-            color: eee;
+            color: #eee;
+    }
+}
+
+#Event {
+    margin-top:55px;
+    margin-left:6px;
+    input { 
+        margin-right: 8px;
     }
 }

@@ -31,7 +31,7 @@
 				
 				<h1>Vad hände först?</h1>
 
-				<div class="card" ng-repeat="event in events">
+				<div class="card" ng-repeat="event in events | limitTo:20"">
 					<span class="questionNumber"> {{ $index+1 }}.</span>
 					<span ng-if="$even"></span>
 						{{}}
