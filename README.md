@@ -22,7 +22,7 @@ Node, Express, Angular, Firebase
 
 ### Credits 
 
-Hanna Andersson, Andreas Dagnell, Robert Lindell
+[Hanna Andersson](https://github.com/hannaand), [Andreas Dagnell](https://github.com/andreasdjs), [Robert Lindell](https://github.com/robertlindell)
 
 ## Installation
 
