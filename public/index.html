@@ -30,6 +30,17 @@
 			<div id="innerContainer" ng-controller="myCtrl">
 				
 				<h1>Vad hände först?</h1>
+
+				<div class="card" ng-repeat="event in events">
+					<span class="questionNumber"> {{ $index+1 }}.</span>
+					<span ng-if="$even"></span>
+						{{}}
+						<button class="event"> {{ events[$index].name }} {{ event[$index].year }} </button>
+						<button class="event"> {{ events[$index + 1].name }} {{ event[$index + 1].year }} </button>
+					</span>
+				</div>
+
+<!--
 				<div class="card">
 				<span class="questionNumber">1.</span> 
 				<button ng-repeat="event in events"> 
@@ -73,6 +84,7 @@
 				<span class="questionNumber">10.</span> 
 					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
 				</div>
+-->
 				<form id="Event">
 					<label class="labelStyle" id="Event">Händelse</label>
 						<input type="text" ng-model="event.name">

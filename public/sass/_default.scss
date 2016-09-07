@@ -127,7 +127,7 @@ button {
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:28px;
-    border: 0px solid white;    
+    border: 2px solid #c0c0c0;    
     outline: none;
     &:hover {
         background-color: #45bc56;
@@ -163,4 +163,17 @@ button.addFriend {
     }
 }
 
-
+button.event {
+    width: 400px; 
+    background-color: #c0c0c0;
+    &:hover {
+            background-color: #eee;
+            border: 2px solid #666;
+            color: black;
+        }    
+    &:active { 
+            background-color: #666;
+            border: 2px solid #eee;
+            color: eee;
+    }
+}
