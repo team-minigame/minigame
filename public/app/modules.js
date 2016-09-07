@@ -21,5 +21,11 @@ function getTotalScore(array) {
 	return sum;
 }
 
+	function getEvenTests(num) {
+	if (num%2 !== 0) return false;
+	return true;
+}
+
 module.exports.getLowestYear = getLowestYear;
 module.exports.getTotalScore = getTotalScore;
+module.exports.getEvenTests = getEvenTests;

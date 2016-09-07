@@ -82,6 +82,7 @@ app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", functio
 
 //var output = modules.getLowestYear(2001, 1984);
 console.log(modules.getLowestYear(2001, 1984));
+console.log(modules.getEvenTests(2, 76, 77));
 
 
 
