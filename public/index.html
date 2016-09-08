@@ -35,56 +35,10 @@
 					<span class="questionNumber"> {{ $index+1 }}.</span>
 					<span ng-if="$even"></span>
 						{{}}
-						<button class="event"> {{ events[$index].name }} {{ event[$index].year }} </button>
-						<button class="event"> {{ events[$index + 1].name }} {{ event[$index + 1].year }} </button>
+						<button class="event"> {{ events[$index].name }} ({{ events[$index].year }}) </button>
+						<button class="event"> {{ events[$index + 1].name }} ({{ events[$index + 1].year }}) </button>
 					</span>
 				</div>
-
-<!--
-				<div class="card">
-				<span class="questionNumber">1.</span> 
-				<button ng-repeat="event in events"> 
-				{{ event.name }} 
-				{{ event.year }}
-				</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">2.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">3.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">4.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">5.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">6.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">7.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">8.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">9.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
-				<div class="card">
-				<span class="questionNumber">10.</span> 
-					<button>Kvinnors rösträtt infördes.</button><button>Förste mannen på månen.</button>
-				</div>
--->
 				<form id="Event">
 					<label class="labelStyle" id="Event">Händelse</label>
 						<input type="text" ng-model="event.name">
