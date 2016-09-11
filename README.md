@@ -54,37 +54,37 @@ $ npm test
 
 ## Git branches - Howto
 
-### 1. Create local branch on GitHub pages
+#### 1. Create local branch on GitHub pages
 
 ```shell
 git branch <branch_name>
 git checkout <branch_name>
 git pull origin <branch_name>
 ```
-### 2. Editing file
+#### 2. Editing file
 
 ```shell
 git add .
-git commit -m “Kommentar”
+git commit -m “Comment”
 ```
 
-### 3. Pushing to github pages
+#### 3. Pushing to github pages
 
 ```shell
 git push origin <branch_name>
 ```
 
-### 4. Creaye pull request på Github Pages
+#### 4. Creaye pull request på Github Pages
 
 ```shell
 Go to: https://github.com/team-minigame/minigame
 Click: New pull request
 
-Compare <branch_name> med master
+Compare <branch_name> with master
 
 Merge
 ```
-### 5. Delete branch locally:
+#### 5. Delete branch locally:
 
 ```shell
 git branch -d <feature-branch>
