@@ -4,28 +4,14 @@
 	<title>När då då?</title>
 	<meta charset="UTF-8">	
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
-	
 <!--    <link rel="stylesheet" type="text/css" href="css/app.min.css" /> -->
 	<!-- Typekit -->
 	<script src="https://use.typekit.net/vrc8urf.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<!-- Live reload --> 
-	<!-- <script>
+	 <script>
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script> -->
-
-    <!-- AngularJS -->
-    <!--
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> 
--->
-	<!-- Firebase -->
-<!--
-	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
--->
-	<!-- AngularFire -->
-	<!--
-	<script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
-	-->
+    </script>
 </head>
 <body ng-app="app">
 	<div id="container">
@@ -35,13 +21,16 @@
 				
 				<h1>Vad hände först?</h1>
 
-				<div class="card" ng-repeat="event in events | limitTo:20"">
-					<span class="questionNumber"> {{ $index+1 }}.</span>
-					<span ng-if="$even"></span>
-						{{}}
-						<button class="event" ng-click="events[$index].showYear = !events[$index].showYear"> {{ events[$index].name }} <p ng-show="events[$index].showYear" ng-bind="events[$index].year"></p></button>
-						<button class="event" ng-click="events[$index + 1].showYear = !events[$index + 1].showYear"> {{ events[$index + 1].name }} <p ng-show="events[$index +1].showYear" ng-bind="events[$index +1].year"></p></button>
-					</span>
+				<div class="card" ng-repeat="event in events | limitTo:20">
+					<div ng-if="$even">
+					<div class="questionNumber"> {{ (($index+1) / 2) +0.5 }}.</div>
+
+						<button id="{{$index}}" class="event" ng-click="checkState(events[$index].year, events[$index+1].year, events[$index].year, $event); events[$index].showYear = !events[$index].showYear"> {{ events[$index].name }} <span ng-show="events[$index].showYear">({{ events[$index].year }})</span> </button>
+						<button class="event last" ng-click="checkState(events[$index].year, events[$index+1].year, events[$index+1].year, $event); events[$index].showYear = !events[$index].showYear"> {{ events[$index + 1].name }} <span ng-show="events[$index].showYear">({{ events[$index + 1].year }})</span> </button>
+					</div>
+				</div>
+				<div>
+					<div class="totalScore">Total score: {{ total }}</div>
 				</div>
 				<form id="Event">
 					<label class="labelStyle" id="Event">Händelse</label>
@@ -55,41 +44,9 @@
 		</div>
 	</div>
 <!--
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-
-	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
--->
-
-
-<!-- Split angular files-->
-
-<!--
-	<script src="app/app.js" type="text/javascript"></script>
-	<script src="app/services.js" type="text/javascript"></script>	
-	<script src="app/controllers.js" type="text/javascript"></script>
-	<script src="app/directives.js" type="text/javascript"></script>
--->
-
-<!-- Main angular file -->
-
-<!--
-	<script src="app/main.js" type="text/javascript"></script>
--->
-
-<!-- Browserify bundle file -->
-<!--
 	<script src="js/bundle.js" type="text/javascript"></script>
 -->
-<!-- Browserify bundle file minified -->
-<!--
-	<script src="js/bundle.js" type="text/javascript"></script>
-	-->
-<!--	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>-->
-
-
-
 	<script src="js/bundle.min.js" type="text/javascript"></script>
-
 
 </body>
 </html>
