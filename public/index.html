@@ -35,8 +35,8 @@
 					<span class="questionNumber"> {{ $index+1 }}.</span>
 					<span ng-if="$even"></span>
 						{{}}
-						<button class="event"> {{ events[$index].name }} {{ event[$index].year }} </button>
-						<button class="event"> {{ events[$index + 1].name }} {{ event[$index + 1].year }} </button>
+						<button class="event" ng-click="events[$index].showYear = !events[$index].showYear"> {{ events[$index].name }} <p ng-show="events[$index].showYear" ng-bind="events[$index].year"></p></button>
+						<button class="event" ng-click="events[$index + 1].showYear = !events[$index + 1].showYear"> {{ events[$index + 1].name }} <p ng-show="events[$index +1].showYear" ng-bind="events[$index +1].year"></p></button>
 					</span>
 				</div>
 

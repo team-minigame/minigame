@@ -30,6 +30,13 @@ module.exports = angular.module('app').controller('myCtrl', ["$scope", "$firebas
     }).then(function(data){
 
     });
+
+    $scope.displayAnswer = false;
+    $scope.showAnswer = function(){
+      if(hasRights == true){
+    $scope.displayAnswer = true //this is used for the hide and show
+   }
+}
    
   };
 
