@@ -52,3 +52,50 @@ $ npm start
 $ npm test
 ```
 
+## Git branches - Howto
+
+### 1. Create local branch on GitHub pages
+
+```shell
+git branch <branch_name>
+git checkout <branch_name>
+git pull origin <branch_name>
+```
+### 2. Editing file
+
+```shell
+git add .
+git commit -m “Kommentar”
+```
+
+### 3. Pushing to github pages
+
+```shell
+git push origin <branch_name>
+```
+
+### 4. Creaye pull request på Github Pages
+
+```shell
+Go to: https://github.com/team-minigame/minigame
+Click: New pull request
+
+Compare <branch_name> med master
+
+Merge
+```
+### 5. Delete branch locally:
+
+```shell
+git branch -d <feature-branch>
+```
+
+## Contributing
+```shell
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+```
+
