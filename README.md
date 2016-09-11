@@ -54,9 +54,11 @@ $ npm test
 
 ## Contributing
 
+You can contribute by either joining the team (A) or use fork (B).
+
 ### A) Join the team and use git branches
 
-#### Pre-req: contact owners to get involved in the team
+Pre-req: contact owners to get involved in the team
 
 #### 1. Create local branch on GitHub pages
 
