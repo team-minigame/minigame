@@ -147,6 +147,7 @@ button.addFriend {
 
 .card {
     display: flex;
+    min-width: 870px;
     margin-bottom:10px;
     button {
         margin-right:10px;
@@ -166,6 +167,8 @@ button.addFriend {
 
 button.event {
     width: 400px; 
+
+    clear: both;
     background-color: #c0c0c0;
     &:hover {
             background-color: #eee;
@@ -178,6 +181,9 @@ button.event {
             color: #eee;
     }
 }
+button.last {
+    margin-right:0px;
+}
 
 #Event {
     margin-top:55px;
@@ -185,4 +191,23 @@ button.event {
     input { 
         margin-right: 8px;
     }
+}
+
+button.green { 
+    color: white;
+    background-color: green;
+}
+
+button.blue { 
+    color: white;
+    background-color: green;
+}
+
+.totalScore { 
+    height: 37px;
+    line-height: 37px;
+    font-size: 21px;
+    font-weight: bold;
+    padding-left: 13px;
+    padding-right: 13px;
 }

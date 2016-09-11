@@ -1,25 +1,12 @@
 
 module.exports = angular.module('app').controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
 
-// angular.module('app').controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
-
-// app.controller('myCtrl', ["$scope", "$firebaseObject", "$firebaseArray", function($scope, $firebaseObject, $firebaseArray) {
- 
-
   var ref = firebase.database().ref();
   var firebaseObject = $firebaseObject(ref);
 
   $scope.events = $firebaseArray(ref);
 
-/*
- function myFunction(a, b) {
-    return a * b;
-  }
-
-  var x = myFunction(4, 3); 
-
-  console.log(x);
-*/
+  $scope.total = "0";
 
   $scope.add = function() {
 
@@ -33,10 +20,30 @@ module.exports = angular.module('app').controller('myCtrl', ["$scope", "$firebas
    
   };
 
-  //firebaseObject.$bindTo($scope,"event");
-  //const rootRef = firebase.database().ref().child('angular');
-  //const ref = rootRef.child('object');
-  //this.object = $firebaseObject(ref);
+  $scope.checkState = function(a, b, pushed, event) {
+	 	if (b > a) {
+	 		console.log($scope.total);
+	 		console.log("A hände först!");
+	 		console.log("a: " + a);
+	 		console.log("b: " + b);
+	 		console.log("pushed: " + pushed);
+	 		if (a == pushed) {
+	 			console.log("Correct answer!");
+	 			$scope.total++;
+	 			console.log("Total score: " + $scope.total);
+	 		}
+	 	} else {
+	 		console.log("B hände först!");
+	 		console.log("a: " + a);
+	 		console.log("b: " + b);
+	 		console.log("pushed: " + pushed);
+	 		if (b == pushed) {
+	 			console.log("Correct answer!");
+	 			$scope.total++;
+	 			console.log("Total score: " + $scope.total);
+	 		}
+		}
+	}
 
 }]);
 
