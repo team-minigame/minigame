@@ -34,17 +34,17 @@ describe('Frontend: getTotalScore', function() {
 
 });
 
-describe('Is Even Tests', function() {
+describe('Frontend: isEven', function() {
 
-	it('Should always return a boolean', function() {
+	it('Should return a boolean', function() {
   		expect(modules.isEven(2)).to.be.a('boolean');
 	});
 	
-	it('Calling isEven(76) sould return true.', function() {
+	it('Calling isEven(76) should return true.', function() {
   		expect(modules.isEven(76)).to.be.true;
 	});
 	
-	it('Calling isEven(77) sould return false.', function() {
+	it('Calling isEven(77) should return false.', function() {
   		expect(modules.isEven(77)).to.be.false;
   	});
 });
