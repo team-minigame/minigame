@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 
 /********************************************/
-/* JS bundling with browserify				*/
+/* JS bundling with browserify
 /********************************************/
 
 var browserify = require('browserify');
@@ -12,14 +12,14 @@ var uglify = require('gulp-uglify');
 var streamify = require('gulp-streamify');
 
 /********************************************/
-/* Transpiling 								*/
+/* Transpiling
 /********************************************/
 
 var babelify = require('babelify');
-// presets?
+// ... need presets
 
 /********************************************/
-/* SASS 									*/
+/* SASS
 /********************************************/
 
 var sass = require('gulp-sass');
@@ -50,7 +50,7 @@ var autoprefixerOptions = {
 };
 
 /********************************************/
-/* Tasks 									*/
+/* Tasks
 /********************************************/
 
 gulp.task('sass', function() {
@@ -77,28 +77,10 @@ gulp.task('sass-minifyed', function() {
 });
 
 gulp.task('js', function() {
-/*
-	return browserify([
-			'./public/app/services.js',
-			'./public/app/controllers.js',
-			'./public/app/directives.js'
-			], { debug: true })
-*/
-/*
-	return browserify([
-			'./public/app/app.js',
-			'./public/app/services.js',
-			'./public/app/controllers.js',
-			'./public/app/directives.js'
-			], { debug: true })
-			*/
-//	return browserify('./public/app/app.js', { debug: true })
 	return browserify('./public/app/main.js', { debug: true }) 
 //		.transform(babelify)
 		.bundle()
-//		.bundle({ debug: true })
 		.pipe(source('./public/js/bundle.js'))
-//		.pipe(streamify(uglify()))
 		.pipe(gulp.dest('.'));
 });
 
@@ -106,21 +88,19 @@ gulp.task('js-minifyed', function() {
     return browserify('./public/app/main.js', { debug: true }) 
 //      .transform(babelify)
         .bundle()
-//      .bundle({ debug: true })
         .pipe(source('./public/js/bundle.min.js'))
         .pipe(streamify(uglify()))
         .pipe(gulp.dest('.'));
 });
 
 /********************************************/
-/* Watch 									*/
+/* Watch 									
 /********************************************/
 
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(jsInput, ['js']);
     gulp.watch(jsInput, ['js-minifyed']);
-//    gulp.watch(['./public/app/*.js'], ['js']);
     gulp.watch(sassInput, ['sass']);
     gulp.watch(sassInput, ['sass-minifyed']);
 });
