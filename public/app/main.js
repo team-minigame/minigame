@@ -2,8 +2,23 @@
 
 // require angular
 // var controllers = require('controllers.js');
+//var _ = require('lodash');
+
+/***********************************/
+/* Requrie
+/***********************************/
+
+var firebase = require('firebase');
+var angular = require('angular');
+var angularfire = require('angularfire');
+
+var ngRoute = require('angular-route');
 
 var modules = require('./modules'); // get functions
+
+/***********************************/
+/* Initialize Angular
+/***********************************/
 
 var app = angular.module('app', ['ngRoute', 'firebase']);
 

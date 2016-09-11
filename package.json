@@ -27,8 +27,13 @@
   },
   "homepage": "https://github.com/andreasdjs/minigame#readme",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angularfire": "^2.0.2",
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "firebase": "^3.3.0",
+    "lodash": "^4.15.0"
   },
   "devDependencies": {
     "babelify": "^7.3.0",
