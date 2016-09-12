@@ -60,7 +60,7 @@ You can contribute by either joining the team (A) or use fork (B).
 
 Pre-req: contact owners to get involved in the team
 
-#### 1. Create local branch on GitHub pages
+#### 1. Create local branch on GitHub 
 
 ```shell
 git branch <branch_name>
@@ -74,13 +74,13 @@ git add .
 git commit -m “Comment”
 ```
 
-#### 3. Pushing to github pages
+#### 3. Pushing to Github 
 
 ```shell
 git push origin <branch_name>
 ```
 
-#### 4. Creaye pull request på Github Pages
+#### 4. Creaye pull request på Github 
 
 ```shell
 Go to: https://github.com/team-minigame/minigame
